@@ -5,9 +5,9 @@ describe('toString', () => {
         expect(result).toBe('')
     })
 
-    it('should convert an array to a comma-separated string', () => {
+    it('should convert a null value inside array to an empty string', () => {
         const result = toString([null, null, 3])
-        expect(result).toBe('null,null,3')
+        expect(result).toBe(',,3')
     })
 
     it('should preserve the sign of -0', () => {
