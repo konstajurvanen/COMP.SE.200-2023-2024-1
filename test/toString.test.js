@@ -5,6 +5,11 @@ describe('toString', () => {
         expect(result).toBe('')
     })
 
+    it('should convert an array to a comma-separated string', () => {
+        const result = toString([null, null, 3])
+        expect(result).toBe('null,null,3')
+    })
+
     it('should preserve the sign of -0', () => {
         const result = toString(-0)
         expect(result).toBe('-0')
@@ -40,6 +45,11 @@ describe('toString', () => {
         const obj = { name: 'John', age: 30 }
         const result = toString(obj)
         expect(result).toBe('[object Object]')
+    })
+
+    it('should convert an array with one string to just the string inside the array', () => {
+        const result = toString(['hello'])
+        expect(result).toBe('hello')
     })
 
     // Add more test cases here...
