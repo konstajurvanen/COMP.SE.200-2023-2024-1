@@ -24,7 +24,13 @@
     "coveragePathIgnorePatterns": [
       "src/.internal",
       "src/isObject.js",
-      "src/isSymbol.js"
+      "src/isSymbol.js",
+      "src/isArguments.js",
+      "src/isArrayLike.js",
+      "src/isBuffer.js",
+      "src/isObjectLike.js",
+      "src/isLength.js",
+      "src/isTypedArray.js"
     ],
     "coverageDirectory": "coverage",
     "verbose": true
