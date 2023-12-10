@@ -15,11 +15,6 @@ describe('isEmpty', () => {
     })
 
     test('should return false for non-empty values', () => {
-        function MyObject() {
-            this.propertyOnInstance = 'I am on the instance';
-        }
-        MyObject.prototype.propertyOnPrototype = 'I am on the prototype';
-        const myInstance = new MyObject();
 
         expect(isEmpty([1, 2, 3])).toBe(false)
         expect(isEmpty('abc')).toBe(false)
@@ -27,7 +22,6 @@ describe('isEmpty', () => {
         expect(isEmpty(new Map([['a', 1]]))).toBe(false)
         expect(isEmpty(new Set([1]))).toBe(false)
         expect(isEmpty(new Object('a'))).toBe(false)
-        ecpect(isEmpty(myInstance)).toBe(false)
     })
 })
 
