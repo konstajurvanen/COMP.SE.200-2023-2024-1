@@ -16,6 +16,11 @@ describe("Filter array", () => {
         expect(result).toEqual([]);
     });
 
+    test('should handle a null array', () => {
+        const result = filter(null, () => true);
+        expect(result).toEqual([]);
+    });
+
     test('should handle a predicate that always returns false', () => {
         const result = filter(users, () => false);
         expect(result).toEqual([]);
