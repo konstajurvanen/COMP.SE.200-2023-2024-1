@@ -1,7 +1,7 @@
 import compact from '../src/compact';
 
 describe('compact', () => {
-    it('should remove all falsey values from the array', () => {
+    it('should remove all falsy values from the array', () => {
         expect(compact([0, 1, false, 2, '', 3])).toEqual([1, 2, 3]);
     });
 

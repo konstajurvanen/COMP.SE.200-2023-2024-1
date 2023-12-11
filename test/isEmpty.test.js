@@ -1,7 +1,7 @@
 import isEmpty from '../src/isEmpty'
 
 describe('isEmpty', () => {
-    test('should return true for empty values', () => {
+    test('should return true for empty or non-enumerable values', () => {
         expect(isEmpty(true)).toBe(true)
         expect(isEmpty(1)).toBe(true)
         expect(isEmpty([])).toBe(true)
@@ -36,7 +36,7 @@ describe('isEmpty', () => {
         const obj = Object.create({ 'a': 1 })
         expect(isEmpty(obj)).toBe(true)
     })
-    
+
     test('should return true for empty object with non-enumerable properties', () => {
         const obj = Object.create(null, {
             'a': {
